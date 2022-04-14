@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="NHI_Medicine_Parser.TransferControl.ProcessingControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NHI_Medicine_Parser.TransferControl"
+             mc:Ignorable="d">
+    <Grid DataContext="{Binding Service}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="{Binding ProgressMessage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="0" Grid.Row="0" FontSize="15" FontFamily="Arial Black" VerticalContentAlignment="Bottom" Padding="10,0,0,0"/>
+        <ProgressBar Value="{Binding Progress, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="0" Grid.Row="1" Margin="10" Height="20"/>
+    </Grid>
+</UserControl>
